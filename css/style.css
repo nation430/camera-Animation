@@ -144,15 +144,15 @@ body{
 .camera:hover .lens2{
     position: absolute;
     left:20px;
-    width:150px;
+    width:150px; 
     height:150px;
     background: #000;
     box-shadow:5px 2px 1px #fff;
     transform-style: preserve-3d;
-    transform:perspective(2000px) translateX(-30px) translateZ(250px);
-    transition:4s;
+    transform:perspective(2000px) translateX(-30px) translateZ(0px);
+    transition: 4s;
     transition-delay:1s;
-    opacity: 1; 
+    opacity: 1;
 }
 .lens3{
     position: absolute;
@@ -166,4 +166,92 @@ body{
     box-shadow:5px 2px 1px #fff;
     transition:5s;
     opacity: .5; 
+    transform:translateX(0px) translateZ(0px);
+}
+
+.camera:hover .lens3{
+    position: absolute;
+    left:20px;
+    width:120px; 
+    height:120px;
+    background: #000;
+    box-shadow:5px 2px 1px #fff;
+    transform-style: preserve-3d;
+    transform:perspective(2000px) translateX(-40px) translateZ(0px);
+    transition: 1s;
+    transition-delay:1s;
+    opacity: 1;
+}
+
+.rect{
+    position: absolute;
+    top:30%;
+    left:30%;
+    width:40px;
+    height:40px;
+    border:2px solid #fff;
+    background: linear-gradient(90deg, #000 70%, #fff);
+}
+
+.button{
+    position: absolute;
+    top:-10%;
+    left:10%;
+    width:40px;
+    height:30px;
+    background: #000;
+    border-radius:10px 10px 0px 0px;
+    box-shadow:inset 2px 2px 3px #fff;
+    transform-origin:right;
+    transform-style: preserve-3d;
+    transform:perspective(1200px);
+}
+
+.button:active{
+    transform:translateY(15px);
+    border-right: 2px solid #000;
+}
+
+.camera:active .button{
+    background:silver;
+    box-shadow: inset 2px 2px 4px #000;
+}
+
+h1{
+    position: absolute;
+    top:10%;
+    right:54%;
+    color:#fff;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.camera:active h1{
+    color:#000;
+}
+
+p{
+    position: absolute;
+    bottom:5%;
+    right:14%;
+    color:#fff;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.camera:active p{
+    color:#000;
+}
+
+.flash{
+    position: absolute;
+    top:25%;
+    left:31%;
+    width:80px;
+    height:20px;
+    border-radius:10px;
+    background: #fff;
+    box-shadow: inset 2px 2px 4px #000;
 }
